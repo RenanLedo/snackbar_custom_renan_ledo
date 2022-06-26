@@ -20,28 +20,79 @@ class Home extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Center(
-            child: ElevatedButton(
-              child: const Text('Snackbar Personalizado'),
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: SnackBarCustomGlass(
-                    titulo: 'Titulo Snackbar',
-                    descricao:
-                        'Descrição total do snackbar Descrição total do snackbar Descrição total do snackbar ',
-                    isAction: true,
-                    onPressedAction: () {
-                      ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                    },
-                    labelAction: 'desfazer',
-                    colorBg: Colors.white,
-                  ),
-                  behavior: SnackBarBehavior.floating,
-                  backgroundColor: Colors.transparent,
-                  elevation: 0,
-                  duration: const Duration(seconds: 3),
-                ));
-              },
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  child: const Text('Snackbar Personalizado'),
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: SnackBarCustomGlass(
+                        titulo: 'Titulo Snackbar',
+                        descricao:
+                            'Descrição total do snackbar Descrição total do snackbar Descrição total do snackbar ',
+                        isAction: false,
+                        onPressedAction: () {
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                        },
+                        labelAction: 'desfazer',
+                        colorBg: Colors.white,
+                      ),
+                      behavior: SnackBarBehavior.floating,
+                      backgroundColor: Colors.transparent,
+                      elevation: 0,
+                      duration: const Duration(seconds: 3),
+                    ));
+                  },
+                ),
+                ElevatedButton(
+                  child: const Text('Alert Snackbar Personalizado'),
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: SnackBarCustomGlass(
+                        titulo: 'Titulo Snackbar',
+                        descricao:
+                            'Descrição total do snackbar Descrição total do snackbar Descrição total do snackbar ',
+                        isAction: false,
+                        onPressedAction: () {
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                        },
+                        labelAction: 'desfazer',
+                        colorBg: Colors.yellow,
+                      ),
+                      behavior: SnackBarBehavior.floating,
+                      backgroundColor: Colors.transparent,
+                      elevation: 0,
+                      duration: const Duration(seconds: 3),
+                    ));
+                  },
+                ),
+                ElevatedButton(
+                  child: const Text('Error Snackbar Personalizado'),
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: SnackBarCustomGlass(
+                        titulo: 'Titulo Snackbar',
+                        descricao:
+                            'Descrição total do snackbar Descrição total do snackbar Descrição total do snackbar ',
+                        isAction: true,
+                        onPressedAction: () {
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                        },
+                        labelAction: 'desfazer',
+                        colorBg: Colors.red,
+                      ),
+                      behavior: SnackBarBehavior.floating,
+                      backgroundColor: Colors.transparent,
+                      elevation: 0,
+                      duration: const Duration(seconds: 3),
+                    ));
+                  },
+                ),
+              ],
             ),
           ),
         ],
